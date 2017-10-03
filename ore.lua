@@ -3,7 +3,36 @@ minetest.register_node("electrodust:stone_with_electrodust", {
 	description = "Electrodust Ore",
 	tiles = {"default_stone.png^electrodust_ore.png"},
 	groups = {cracky = 2},
-	drop = 'default:iron_lump',
+	--do drops like this to give random number of drops
+	drop = {
+            max_items = 6,  -- Maximum number of items to drop.
+            items = { -- Choose max_items randomly from this list.
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+                {
+                    items = {"electrodust:dust"},  -- Items to drop.
+                    rarity = 2,  -- Probability of dropping is 1 / rarity.
+                },
+            },
+        },
 	sounds = default.node_sound_stone_defaults(),
 	light_source = 14,
 	--particles when digging
